@@ -1,3 +1,6 @@
+package com.example.demo.domain.entity
+
+
 import jakarta.persistence.EntityListeners
 import jakarta.persistence.MappedSuperclass
 import org.springframework.data.annotation.CreatedDate
