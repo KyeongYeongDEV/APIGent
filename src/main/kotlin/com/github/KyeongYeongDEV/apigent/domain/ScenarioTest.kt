@@ -2,9 +2,10 @@ package com.github.KyeongYeongDEV.apigent.domain
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Column
+import org.springframework.data.relational.core.mapping.Table
 import java.time.LocalDateTime
 
-
+@Table("scenario_test")
 data class ScenarioTest(
     @Id
     val id : Long? = null,

@@ -19,15 +19,23 @@ repositories {
 }
 
 dependencies {
-    // Spring WebFlux & Netty
+    // Spring WebFlux & Netty (리액티브 웹)
     implementation("org.springframework.boot:spring-boot-starter-webflux")
 
-    // R2DBC
+    // R2DBC (리액티브 DB 연동)
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
-    runtimeOnly("io.asyncer:r2dbc-mysql")
-    runtimeOnly("com.mysql:mysql-connector-j")
 
-    // Redis
+    // ⭐️ [수정됨]
+    // 1. 'dev.miku:r2dbc-mysql' (오래된 드라이버) -> 'io.asyncer:r2dbc-mysql' (새로운 공식 드라이버)로 변경했습니다.
+    // 2. Spring Boot 3.2.4를 사용 중이므로 'io.spring.dependency-management' 플러그인이
+    //    'io.asyncer:r2dbc-mysql'의 버전을 자동으로 관리해 줍니다. (버전 명시 불필요)
+    runtimeOnly("io.asyncer:r2dbc-mysql")
+
+    // ⭐️ [제거됨]
+    // 'com.mysql:mysql-connector-j' (JDBC 드라이버)는 R2DBC가 사용하지 않으므로 제거했습니다.
+    // runtimeOnly("com.mysql:mysql-connector-j")
+
+    // Redis (리액티브)
     implementation("org.springframework.boot:spring-boot-starter-data-redis-reactive")
 
     // Kotlin & Coroutine
@@ -37,7 +45,7 @@ dependencies {
     // .env 파일 로더
     implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
 
-    // JSON 처리
+    // JSON 처리를 위한 Jackson 모듈
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
     // 테스트
