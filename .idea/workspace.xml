@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="168036ce-29b1-421e-8d4d-7d2ef8f35625" name="변경" comment="" />
+    <list default="true" id="168036ce-29b1-421e-8d4d-7d2ef8f35625" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/KyeongYeongDEV/apigent/common/GeminiClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
