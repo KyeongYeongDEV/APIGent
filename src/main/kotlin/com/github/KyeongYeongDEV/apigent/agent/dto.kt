@@ -1,7 +1,8 @@
 package com.github.KyeongYeongDEV.apigent.agent
 
 data class ScenarioTestRequest(
-    val swaggerUrl : String,
+    // 예: "http://54.180.88.182:8000"
+    val baseUrl: String,
     val scenario : String
 )
 
